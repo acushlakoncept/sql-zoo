@@ -6,3 +6,17 @@ WHERE population >= 200000000;
 SELECT name, (gdp/population) as 'per capita GDP' FROM world
 WHERE population >= 200000000;
 
+-- Show the name and population in millions for the countries of the continent 'South America'. Divide the population by 1000000 to get population in millions.
+SELECT name, (population/1000000) as population FROM world
+WHERE continent = 'South America'
+
+-- Show the name and population for France, Germany, Italy
+SELECT name, population FROM world
+WHERE name IN ('France', 'Germany', 'Italy');
+
+
+-- Show the countries which have a name that includes the word 'United'
+SELECT name FROM world
+WHERE name LIKE '%United%';
+
+--  The rest are same questions from select_names.sql
